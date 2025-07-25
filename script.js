@@ -77,13 +77,36 @@ function showBouquetAnimation() {
   `;
 }
 
-// Show bouquet animation when main content is shown
+// --- Shuffling Positive Words ---
+const youAreWords = [
+  'pretty', 'beautiful', 'mine', 'amazing', 'special', 'loved', 'wonderful', 'perfect', 'unique', 'adorable'
+];
+let youAreIndex = 0;
+function shuffleYouAreWord() {
+  const wordEl = document.getElementById('you-are-word');
+  if (!wordEl) return;
+  wordEl.style.opacity = 0;
+  wordEl.style.transform = 'translateY(20px)';
+  setTimeout(() => {
+    wordEl.textContent = youAreWords[youAreIndex];
+    wordEl.style.opacity = 1;
+    wordEl.style.transform = 'translateY(0)';
+    youAreIndex = (youAreIndex + 1) % youAreWords.length;
+  }, 350);
+}
+let youAreInterval = null;
+function startYouAreShuffle() {
+  shuffleYouAreWord();
+  youAreInterval = setInterval(shuffleYouAreWord, 1500);
+}
+
+// --- Show shuffling box when main content is shown ---
 function fadeInBouquetAndImages() {
-  showBouquetAnimation();
   // Trigger reflow for fade-in animations
   document.querySelectorAll('.fade-in-left, .fade-in-right').forEach(el => {
     el.style.animationPlayState = 'running';
   });
+  startYouAreShuffle();
 }
 
 // --- Password Protection (add bouquet trigger) ---

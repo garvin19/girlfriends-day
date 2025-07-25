@@ -12,7 +12,7 @@ body {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1000;
 }
 
 .centered {
@@ -298,4 +298,35 @@ header h3 {
     width: 140px;
     height: 140px;
   }
+}
+
+#you-are-box {
+  background: rgba(255, 182, 213, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(231,84,128,0.10);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 180px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1.5px solid #ffb6d5;
+}
+#you-are-box h4 {
+  font-size: 1.5rem;
+  color: #e75480;
+  margin: 0 0 0.7rem 0;
+  letter-spacing: 0.08em;
+}
+#you-are-word {
+  font-size: 2.1rem;
+  color: #b23a48;
+  margin-top: 0.2rem;
+  min-height: 2.5rem;
+  transition: opacity 0.4s, transform 0.4s;
+  text-align: center;
+  text-shadow: 0 2px 8px #ffe0ef;
+  font-weight: 700;
 }
