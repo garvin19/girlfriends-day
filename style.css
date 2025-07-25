@@ -172,6 +172,12 @@ header h3 {
   padding: 2rem 1.5rem 3rem 1.5rem;
 }
 
+.cursive {
+  font-family: 'Dancing Script', cursive !important;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .love-line {
   margin-top: 2.5rem;
   font-size: 2.2rem;
@@ -180,7 +186,7 @@ header h3 {
   text-shadow: 0 0 12px #e75480, 0 0 24px #ffb6d5;
   letter-spacing: 0.08em;
   animation: glow 2s infinite alternate;
-  font-family: 'Poppins', cursive, sans-serif;
+  font-family: 'Dancing Script', cursive, sans-serif !important;
 }
 
 @keyframes glow {
